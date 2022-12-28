@@ -11,4 +11,7 @@ urlpatterns = [
     path('authors/<int:pk>/', AuthorDetail.as_view(), name='api-author'),
     path('books/', BookList.as_view(), name='api-books'),
     path('books/<int:pk>/', BookDetail.as_view(), name='api-book'),
+    path('comments/', CommentList.as_view(), name='api-comments'),
+    path('comments/<int:pk>/', CommentDetail.as_view(), name='api-comment'),
+    path('books/author/<int:id>/', BooksByAuthor.as_view(), name='api-books-author')
 ]
