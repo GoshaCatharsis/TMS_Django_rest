@@ -17,4 +17,8 @@ class BookAdmin(admin.ModelAdmin):
     list_display = ['title', 'author', 'summary', 'genre', 'price', 'amount']
 
 
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['content', 'user', 'post', 'created']
+
 
